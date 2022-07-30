@@ -5,7 +5,6 @@ from graphene import ObjectType, Schema
 from .models import Publisher, Book
 
 
-
 class PublisherType(DjangoObjectType):
     
     class Meta:
