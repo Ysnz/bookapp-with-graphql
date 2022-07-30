@@ -1,7 +1,6 @@
 import graphene
-from graphene.types import schema
 from graphene_django import DjangoObjectType
-from graphene import ObjectType, Schema
+# from graphene import ObjectType, Schema
 from .models import Publisher, Book
 
 
@@ -19,8 +18,15 @@ class BookType(DjangoObjectType):
         fields = ("id", "pub", "title", "price", "category", "quantity", "b_format", "prod_year", "filesize")
         
         
-class Query(ObjectType):
+class Query(graphene.ObjectType):
     all_book      = graphene.List(BookType)
     all_publisher = graphene.List(PublisherType)
+    
+    def resolve_all_book(root, info):
+        return Book.objects.all()
+
+    def resolve_all_publisher(root, info):
+        return Publisher.objects.all()
+
 
 schema = graphene.Schema(query=Query)
