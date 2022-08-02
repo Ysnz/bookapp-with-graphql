@@ -135,7 +135,7 @@ class UpdateBook(graphene.Mutation):
         
         return UpdateBook(books=books)
 
-class Mutation(AutMutation, graphene.ObjectType):
+class Mutation(graphene.ObjectType):
     update_publisher = UpdatePublisher.Field()
     create_publisher = CreatePublisher.Field()
     update_book = UpdateBook.Field()
