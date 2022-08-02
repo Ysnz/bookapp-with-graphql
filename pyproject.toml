@@ -1,0 +1,46 @@
+[tool.poetry]
+name = "graphql-app"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+aniso8601 = "9.0.1"
+Django = "^4.0.6"
+tomlkit = "0.11.1"
+CacheControl = "0.12.11"
+asgiref = "3.5.2"
+cachy = "0.3.0"
+certifi = "2022.6.15"
+charset-normalizer = "2.1.0"
+cleo = "0.8.1"
+clikit = "0.6.2"
+crashtest = "0.3.1"
+distlib = "0.3.5"
+django-graphql-extensions = "0.0.7"
+django-graphql-jwt = "0.3.2"
+filelock = "3.7.1"
+graphene = "3.1"
+graphene-django = "3.0.0b7"
+graphene-file-upload = "1.3.0"
+graphql-core = "3.1.6"
+graphql-relay = "3.1.5"
+html5lib = "1.1"
+idna = "3.3"
+importlib-metadata = "4.12.0"
+keyring = "23.7.0"
+lockfile = "0.12.2"
+msgpack = "1.0.4"
+pastel = "0.2.1"
+packaging = "20.9"
+pexpect = "4.8.0"
+requests = "2.28.1"
+requests-toolbelt = "0.9.1"
+psycopg2-binary = "^2.9.3"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

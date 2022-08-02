@@ -1,4 +1,5 @@
 import graphene
+from graphene.relay import mutation
 from graphene_django import DjangoObjectType
 # from graphene import ObjectType, Schema
 from .models import Publisher, Book
@@ -134,12 +135,10 @@ class UpdateBook(graphene.Mutation):
         
         return UpdateBook(books=books)
 
-
-class Mutation(graphene.ObjectType):
+class Mutation(AutMutation, graphene.ObjectType):
     update_publisher = UpdatePublisher.Field()
     create_publisher = CreatePublisher.Field()
     update_book = UpdateBook.Field()
-    create_book = CreateBooks.Field()
-    
+    create_book = CreateBooks.Field()   
     
 schema = graphene.Schema(query=Query, mutation=Mutation)
